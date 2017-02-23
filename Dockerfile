@@ -20,7 +20,7 @@ RUN bash -c 'curl https://sdk.cloud.google.com | bash'
 ENV PATH /home/opam/google-cloud-sdk/bin/:${PATH}
 RUN gcloud components install kubectl
 # Installing GCloudNFS: cioc/gcloudnfs
-RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install python-pip python-dev build-essential'
+RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install python-pip python-dev build-essential wget'
 RUN sudo bash -c 'pip install --upgrade google-api-python-client'
 RUN sudo bash -c 'wget https://raw.githubusercontent.com/cioc/gcloudnfs/master/gcloudnfs -O/usr/bin/gcloudnfs'
 RUN sudo bash -c 'chmod a+rx /usr/bin/gcloudnfs'

@@ -14,6 +14,7 @@ RUN opam pin --yes add ketrew https://github.com/hammerlab/ketrew.git#master
 # A user: biokepi with a consistent UID: 20042
 RUN sudo bash -c 'adduser --uid 20042 --disabled-password --gecos '\'''\'' biokepi && passwd -l biokepi && chown -R biokepi:biokepi /home/biokepi'
 # Installing GCloud command-line tool with kubectl
+RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install python build-essential'
 ENV CLOUDSDK_CORE_DISABLE_PROMPTS true
 RUN bash -c 'curl https://sdk.cloud.google.com | bash'
 ENV PATH /home/opam/google-cloud-sdk/bin/:${PATH}

@@ -21,4 +21,7 @@ RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install python-pip p
 RUN sudo bash -c 'pip install --upgrade google-api-python-client'
 RUN sudo bash -c 'wget https://raw.githubusercontent.com/cioc/gcloudnfs/master/gcloudnfs -O/usr/bin/gcloudnfs'
 RUN sudo bash -c 'chmod a+rx /usr/bin/gcloudnfs'
+# Getting more things usefull for Secotrec-GKE deployments
+RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install zlib1g-dev screen nfs-common graphviz'
+RUN opam install --yes tlstunnel
 RUN opam pin --yes add coclobas https://github.com/hammerlab/coclobas.git#master

@@ -6,12 +6,11 @@ Ketrew-Related `DockerFile`s (contents of this repo are software-generated, cf.
 
 Available Tags
 --------------
-* `ketrew-server-300` 
 
-* `ketrew-server` 
+See also the Docker-hub [tags](https://hub.docker.com/r/hammerlab/keredofi/tags/).
 
-* `biokepi-run` 
-
-* `coclobas-gke-dev` 
-
-* `coclobas-gke-biokepi-dev` 
+* `ketrew-server-300` (see [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/ketrew-server-300/Dockerfile)).
+* `ketrew-server` (see [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/ketrew-server/Dockerfile)).
+* `biokepi-run` (see [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/biokepi-run/Dockerfile)).
+* `coclobas-gke-dev` (see [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-dev/Dockerfile)).
+* `coclobas-gke-biokepi-dev` (see [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-biokepi-dev/Dockerfile)).

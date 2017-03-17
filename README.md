@@ -20,6 +20,8 @@ See also the Docker-hub [tags](https://hub.docker.com/r/hammerlab/keredofi/tags/
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/biokepi-run/Dockerfile).
 * `hammerlab/keredofi:coclobas-gke-dev`:
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-dev/Dockerfile).
+* `hammerlab/keredofi:coclobas-gke-biokepi-default`:
+    * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-biokepi-default/Dockerfile).
 * `hammerlab/keredofi:coclobas-gke-biokepi-dev`:
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-biokepi-dev/Dockerfile).
 * `hammerlab/keredofi:secotrec-default`:

@@ -30,6 +30,7 @@ RUN sudo bash -c 'echo debconf shared/accepted-oracle-license-v1-1 select true |
 RUN sudo bash -c 'echo debconf shared/accepted-oracle-license-v1-1 seen true |  debconf-set-selections'
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get install --yes --allow-unauthenticated oracle-java7-installer'
 # A user: biokepi with a consistent UID: 20042
+RUN sudo bash -c 'echo '\''opam ALL=(ALL:ALL) NOPASSWD:ALL'\'' > /etc/sudoers.d/biokepi && chmod 440 /etc/sudoers.d/biokepi && chown root:root /etc/sudoers.d/biokepi'
 RUN sudo bash -c 'adduser --uid 20042 --disabled-password --gecos '\'''\'' biokepi && passwd -l biokepi && chown -R biokepi:biokepi /home/biokepi'
 USER biokepi
 ENV HOME /home/biokepi
@@ -38,5 +39,5 @@ WORKDIR /home/biokepi
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install python build-essential'
 ENV CLOUDSDK_CORE_DISABLE_PROMPTS true
 RUN bash -c 'curl https://sdk.cloud.google.com | bash'
-ENV PATH /home/opam/google-cloud-sdk/bin/:${PATH}
+ENV PATH ${HOME}/google-cloud-sdk/bin/:${PATH}
 RUN gcloud components install kubectl

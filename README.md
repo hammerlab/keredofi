@@ -18,6 +18,9 @@ See also the Docker-hub [tags](https://hub.docker.com/r/hammerlab/keredofi/tags/
 * `hammerlab/keredofi:biokepi-run`:
     * Ubuntu image with the “system” dependencies that [Biokepi](https://github.com/hammerlab/biokepi) workflows require, and a special `biokepi` user with a fixed UID (useful for shared file-systems).
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/biokepi-run/Dockerfile).
+* `hammerlab/keredofi:biokepi-run-gcloud`:
+    * Image similar to `biokepi-run` but with the `gcloud` and `gsutil` tools installed (for the `biokepi` user)
+    * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/biokepi-run-gcloud/Dockerfile).
 * `hammerlab/keredofi:coclobas-gke-dev`:
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-dev/Dockerfile).
 * `hammerlab/keredofi:coclobas-gke-biokepi-default`:

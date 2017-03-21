@@ -22,10 +22,8 @@ ENV PATH ${HOME}/google-cloud-sdk/bin/:${PATH}
 RUN gcloud components install kubectl
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install dnsutils libpq-dev libev-dev libgmp-dev'
 # A few opam-pins:
-RUN opam pin --yes -n add 'coclobas' 'https://github.com/hammerlab/coclobas.git#master'
 RUN opam pin --yes -n add 'ketrew' 'https://github.com/hammerlab/ketrew.git#master'
 RUN opam pin --yes -n add 'biokepi' 'https://github.com/hammerlab/biokepi.git#master'
-RUN opam pin --yes -n add 'genspio' 'https://github.com/hammerlab/genspio.git#master'
 RUN opam pin --yes -n add 'secotrec' 'https://github.com/hammerlab/secotrec.git#master'
 RUN opam upgrade --yes
-RUN opam install --yes coclobas ketrew biokepi genspio secotrec tls
+RUN opam install --yes ketrew biokepi secotrec tls

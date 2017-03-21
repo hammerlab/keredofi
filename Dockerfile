@@ -24,7 +24,7 @@ RUN opam install --yes ketrew
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install python build-essential'
 ENV CLOUDSDK_CORE_DISABLE_PROMPTS true
 RUN bash -c 'curl https://sdk.cloud.google.com | bash'
-ENV PATH /home/opam/google-cloud-sdk/bin/:${PATH}
+ENV PATH ${HOME}/google-cloud-sdk/bin/:${PATH}
 RUN gcloud components install kubectl
 # A few opam-pins:
 RUN opam pin --yes -n add 'coclobas' 'https://github.com/hammerlab/coclobas.git#master'

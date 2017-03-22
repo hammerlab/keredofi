@@ -30,5 +30,6 @@ RUN opam install --yes ketrew biokepi secotrec tls
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install vim emacs tmux git-hub samtools vcftools'
 # A few opam-pins:
 RUN opam pin --yes -n add 'epidisco' 'https://github.com/hammerlab/epidisco.git#master'
+RUN opam pin --yes -n add 'ogene' 'https://github.com/hammerlab/ogene.git#master'
 RUN opam upgrade --yes
 RUN opam install --yes epidisco ogene

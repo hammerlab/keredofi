@@ -27,7 +27,7 @@ RUN opam pin --yes -n add 'biokepi' 'https://github.com/hammerlab/biokepi.git#ma
 RUN opam pin --yes -n add 'secotrec' 'https://github.com/hammerlab/secotrec.git#master'
 RUN opam upgrade --yes
 RUN opam install --yes ketrew biokepi secotrec tls
-RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install vim emacs tmux git-hub samtools vcftools'
+RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install vim emacs tmux git-hub samtools vcftools bwa'
 # A few opam-pins:
 RUN opam pin --yes -n add 'epidisco' 'https://github.com/hammerlab/epidisco.git#master'
 RUN opam pin --yes -n add 'ogene' 'https://github.com/hammerlab/ogene.git#master'

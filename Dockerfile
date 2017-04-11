@@ -38,7 +38,14 @@ WORKDIR /home/biokepi
 # Installing GCloud command-line tool with kubectl
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install python build-essential'
 ENV CLOUDSDK_CORE_DISABLE_PROMPTS true
+ENV CLOUDSDK_INSTALL_DIR /opt
 RUN bash -c 'curl https://sdk.cloud.google.com | bash'
-ENV PATH ${HOME}/google-cloud-sdk/bin/:${PATH}
+ENV PATH ${CLOUDSDK_INSTALL_DIR}/google-cloud-sdk/bin/:${PATH}
 RUN gcloud components install kubectl
+RUN sudo bash -c 'echo '\''# GCloud installation:'\'' >> /etc/profile.d/gcloud_installation.sh'
+RUN sudo bash -c 'echo '\''export CLOUDSDK_INSTALL_DIR=/opt'\'' >> /etc/profile.d/gcloud_installation.sh'
+RUN sudo bash -c 'echo '\''export PATH=${CLOUDSDK_INSTALL_DIR}/google-cloud-sdk/bin/:${PATH}'\'' >> /etc/profile.d/gcloud_installation.sh'
+RUN sudo bash -c 'chmod 666 /etc/profile.d/gcloud_installation.sh'
+RUN bash -c 'echo Created file /etc/profile.d/gcloud_installation.sh'
+RUN bash -c 'cat /etc/profile.d/gcloud_installation.sh '
 ENTRYPOINT bash

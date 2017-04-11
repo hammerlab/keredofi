@@ -36,5 +36,5 @@ See also the Docker-hub [tags](https://hub.docker.com/r/hammerlab/keredofi/tags/
     * Just an Ubuntu image with `docker.io` installed (useful for testing these images, cf. Secotrec [docs](https://github.com/hammerlab/secotrec#secotrec-make-dockerfiles)).
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/ubuntu-docker/Dockerfile).
 * `hammerlab/keredofi:epidisco-dev`:
-    * Developer-friendly environment for Biokepi/Secotrec projects with various tools (text editors, git-hub, Epidisco).
+    * Development/bioinformatics environment with Epidisco and various tools (text editors, git-hub).
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/epidisco-dev/Dockerfile).

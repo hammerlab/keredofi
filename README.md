@@ -12,6 +12,9 @@ See also the Docker-hub [tags](https://hub.docker.com/r/hammerlab/keredofi/tags/
 * `hammerlab/keredofi:ketrew-server-300`:
     * OCaml/Opam environment with [Ketrew](https://github.com/hammerlab/ketrew) 3.0.0 installed.
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/ketrew-server-300/Dockerfile).
+* `hammerlab/keredofi:ketrew-server-310`:
+    * OCaml/Opam environment with [Ketrew](https://github.com/hammerlab/ketrew) 3.1.0 installed.
+    * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/ketrew-server-310/Dockerfile).
 * `hammerlab/keredofi:ketrew-server`:
     * OCaml/Opam environment with the `master` version of [Ketrew](https://github.com/hammerlab/ketrew) installed.
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/ketrew-server/Dockerfile).

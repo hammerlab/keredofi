@@ -15,5 +15,5 @@ RUN opam pin --yes -n add 'ocamlbuild' '0.9.3'
 RUN opam upgrade --yes
 RUN opam install --yes ocamlbuild
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install libsqlite3-dev libpq-dev libev-dev libgmp-dev'
-RUN opam install -y tls conf-libev
+RUN opam install -y tls conf-libev postgresql
 RUN opam install ketrew.3.0.0

@@ -15,7 +15,7 @@ RUN opam pin --yes -n add 'ocamlbuild' '0.9.3'
 RUN opam upgrade --yes
 RUN opam install --yes ocamlbuild
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install libpq-dev libev-dev libgmp-dev'
-RUN opam install -y tls conf-libev
+RUN opam install -y tls conf-libev postgresql
 # A few opam-pins:
 RUN opam pin --yes -n add 'ketrew' 'https://github.com/hammerlab/ketrew.git#master'
 RUN opam upgrade --yes

@@ -35,4 +35,4 @@ RUN sudo bash -c 'adduser --uid 20042 --disabled-password --gecos '\'''\'' bioke
 USER biokepi
 ENV HOME /home/biokepi
 WORKDIR /home/biokepi
-ENTRYPOINT bash
+ENTRYPOINT /bin/sh

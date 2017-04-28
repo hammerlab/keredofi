@@ -48,4 +48,4 @@ RUN sudo bash -c 'echo '\''export PATH=${CLOUDSDK_INSTALL_DIR}/google-cloud-sdk/
 RUN sudo bash -c 'chmod 666 /etc/profile.d/gcloud_installation.sh'
 RUN bash -c 'echo Created file /etc/profile.d/gcloud_installation.sh'
 RUN bash -c 'cat /etc/profile.d/gcloud_installation.sh '
-ENTRYPOINT bash
+ENTRYPOINT /bin/sh

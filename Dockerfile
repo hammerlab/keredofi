@@ -26,7 +26,7 @@ RUN sudo bash -c 'adduser --uid 20042 --disabled-password --gecos '\'''\'' bioke
 # Installing aws-cli command-line tool
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install python python-pip build-essential'
 RUN sudo pip install --upgrade awscli
-# Getting more things usefull for Secotrec-GKE deployments
+# Getting more things usefull for Secotrec-* deployments
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install zlib1g-dev screen nfs-common graphviz'
 RUN opam install --yes tlstunnel
 # A few opam-pins:

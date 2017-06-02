@@ -14,7 +14,7 @@ RUN opam upgrade --yes
 RUN opam pin --yes -n add 'ocamlbuild' '0.9.3'
 RUN opam upgrade --yes
 RUN opam install --yes ocamlbuild
-RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install cmake r-base tcsh libx11-dev libbz2-dev libfreetype6-dev pkg-config wget gawk graphviz xvfb git'
+RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install cmake r-base tcsh libx11-dev libbz2-dev libfreetype6-dev pkg-config wget gawk graphviz xvfb git time'
 # Install wkhtmltopdf from source, this version comes with patched QT necessary for PDF gen
 RUN cd /tmp ; wget http://download.gna.org/wkhtmltopdf/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
 RUN cd /tmp && tar xvfJ wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
@@ -35,4 +35,4 @@ RUN sudo bash -c 'adduser --uid 20042 --disabled-password --gecos '\'''\'' bioke
 USER biokepi
 ENV HOME /home/biokepi
 WORKDIR /home/biokepi
-ENTRYPOINT /bin/sh
+ENTRYPOINT [ "/usr/bin/time" ]

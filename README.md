@@ -36,7 +36,7 @@ See also the Docker-hub [tags](https://hub.docker.com/r/hammerlab/keredofi/tags/
     * Image similar to `coclobas-gke-biokepi-default` but with Coclobas pinned to its `master` branch.
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-biokepi-dev/Dockerfile).
 * `hammerlab/keredofi:coclobas-aws-biokepi-dev`:
-    * Image similar to `coclobas-gke-biokepi-default` but with Coclobas pinned to its `master` branch and `aws` instead of `gcloud`.
+    * Image similar to `coclobas-gke-biokepi-default` but with Coclobas pinned to its `master` branch and we provide `aws` instead of `gcloud`.
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-aws-biokepi-dev/Dockerfile).
 * `hammerlab/keredofi:secotrec-default`:
     * OCaml/Opam environment with the `master` version of [Secotrec](https://github.com/hammerlab/secotrec) (and some tools it may use) installed.

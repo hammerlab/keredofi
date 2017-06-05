@@ -47,3 +47,6 @@ See also the Docker-hub [tags](https://hub.docker.com/r/hammerlab/keredofi/tags/
 * `hammerlab/keredofi:epidisco-dev`:
     * Developer-friendly environment for Biokepi/Secotrec projects with various tools (text editors, git-hub, Epidisco).
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/epidisco-dev/Dockerfile).
+* `hammerlab/keredofi:tlstunnel`:
+    * Simple image with TLSTunnel installed from Opam.
+    * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/tlstunnel/Dockerfile).

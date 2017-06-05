@@ -43,8 +43,9 @@ RUN sudo bash -c 'wget https://raw.githubusercontent.com/cioc/gcloudnfs/master/g
 RUN sudo bash -c 'chmod a+rx /usr/bin/gcloudnfs'
 # Getting more things usefull for Secotrec-* deployments
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install zlib1g-dev screen nfs-common graphviz'
-RUN opam install --yes tlstunnel
 # A few opam-pins:
 RUN opam pin --yes -n add 'coclobas' 'https://github.com/hammerlab/coclobas.git#master'
 RUN opam upgrade --yes
 RUN opam install --yes coclobas
+ENTRYPOINT [ "opam", "config", "exec", "--" ]
+CMD [ "bash" ]

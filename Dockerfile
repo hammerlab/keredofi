@@ -37,3 +37,5 @@ RUN bash -c 'cat /etc/profile.d/gcloud_installation.sh '
 RUN opam pin --yes -n add 'coclobas' 'https://github.com/hammerlab/coclobas.git#master'
 RUN opam upgrade --yes
 RUN opam install --yes coclobas
+ENTRYPOINT [ "opam", "config", "exec", "--" ]
+CMD [ "bash" ]

@@ -44,7 +44,7 @@ RUN sudo bash -c 'chmod a+rx /usr/bin/gcloudnfs'
 # Getting more things usefull for Secotrec-* deployments
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install zlib1g-dev screen nfs-common graphviz'
 # A few opam-pins:
-RUN opam pin --yes -n add 'coclobas' '0.0.1'
+RUN opam pin --yes -n add 'coclobas' '0.0.2'
 RUN opam upgrade --yes
 RUN opam install --yes coclobas
 ENTRYPOINT [ "opam", "config", "exec", "--" ]

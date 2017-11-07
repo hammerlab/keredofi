@@ -30,7 +30,7 @@ See also the Docker-hub [tags](https://hub.docker.com/r/hammerlab/keredofi/tags/
 * `hammerlab/keredofi:coclobas-gke-dev`:
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-dev/Dockerfile).
 * `hammerlab/keredofi:coclobas-gke-biokepi-default`:
-    * The default image used by Secotrec for GKE/Local deployments, it has `gcloud`, `gcloudnfs`, the Biokepi NFS-friendly user, TLS-tunnel, Coclobas 0.0.1 and Ketrew `master` branch (until next version).
+    * The default image used by Secotrec for GKE/Local deployments, it has `gcloud`, `gcloudnfs`, the Biokepi NFS-friendly user, TLS-tunnel, Coclobas 0.0.2 and Ketrew `master` branch (until next version).
     * See [`Dockerfile`](https://github.com/hammerlab/keredofi/blob/coclobas-gke-biokepi-default/Dockerfile).
 * `hammerlab/keredofi:coclobas-gke-biokepi-dev`:
     * Image similar to `coclobas-gke-biokepi-default` but with Coclobas pinned to its `master` branch.

@@ -30,7 +30,8 @@ RUN bash -c 'cat /etc/profile.d/gcloud_installation.sh '
 RUN sudo bash -c 'DEBIAN_FRONTEND=noninteractive apt-get -y install dnsutils libpq-dev libev-dev libgmp-dev'
 # A few opam-pins:
 RUN opam pin --yes -n add 'ketrew' 'https://github.com/hammerlab/ketrew.git#master'
+RUN opam pin --yes -n add 'coclobas' 'https://github.com/hammerlab/coclobas.git#master'
 RUN opam pin --yes -n add 'biokepi' 'https://github.com/hammerlab/biokepi.git#master'
 RUN opam pin --yes -n add 'secotrec' 'https://github.com/hammerlab/secotrec.git#master'
 RUN opam upgrade --yes
-RUN opam install --yes ketrew biokepi secotrec tls
+RUN opam install --yes ketrew coclobas biokepi secotrec tls
